@@ -10,6 +10,7 @@ using Android.OS;
 using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Analytics;
 using Microsoft.Azure.Mobile.Crashes;
+using DroneLander.Common;
 
 namespace DroneLander.Droid
 {
@@ -23,7 +24,7 @@ namespace DroneLander.Droid
 
             base.OnCreate(bundle);
 
-            MobileCenter.Start("ea26f5ad-d7f3-4a74-be3e-9dfa3709bffa",
+            MobileCenter.Start(MobileCenterConstants.AndroidAppId,
                    typeof(Analytics), typeof(Crashes));
 
             global::Xamarin.Forms.Forms.Init(this, bundle);

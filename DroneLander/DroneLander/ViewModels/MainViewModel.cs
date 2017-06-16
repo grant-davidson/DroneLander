@@ -223,6 +223,8 @@ namespace DroneLander.ViewModels
 
         public async void ResetLanding()
         {
+
+            throw new Exception("Unhandled exception to test analytics!");
             Helpers.AudioHelper.ToggleEngine();
 
             await Task.Delay(500);
